@@ -1,0 +1,72 @@
+body {
+    background-image: url(images/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+}
+.sun img {
+    width: 150px;
+    height: 150px;
+}
+
+.earth-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 450px;
+    border: 2px solid white; 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.earth {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    animation: rotate 10s linear infinite;
+}
+.earth img {
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) translateX(300px)
+    }
+    to {
+        transform: rotate(360deg) translateX(300px)
+    }
+}
+
+.star {
+    position: absolute;
+    top: 10%;
+    right: 90%;
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+.star img {
+    width: 80px;
+    height: 80px;
+}
+
+.star:hover {
+    transform: scale(2);
+}
